@@ -6,8 +6,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "USB to JTAG and SWD interface"
-Date "2018-10-16"
-Rev "4"
+Date "2019-06-19"
+Rev "5.1"
 Comp "Harmon Instruments, LLC"
 Comment1 "Licensed under GNU GPL 3.0 or later"
 Comment2 ""
@@ -219,7 +219,7 @@ $EndComp
 Wire Wire Line
 	5250 6500 5250 6600
 Wire Wire Line
-	6300 3200 5600 3200
+	6300 3300 5600 3300
 Wire Wire Line
 	3550 6100 3550 6000
 Wire Wire Line
@@ -309,10 +309,10 @@ F 5 "0.05" V 2250 4900 60  0001 C CNN "Power"
 $EndComp
 Text Label 5700 3100 0    50   ~ 0
 TCK1
-Text Label 5700 3200 0    50   ~ 0
-TDI1
 Text Label 5700 3300 0    50   ~ 0
 TDO1
+Text Label 5700 3200 0    50   ~ 0
+TDI1
 Text Label 5700 3400 0    50   ~ 0
 TMS1
 Text Label 8550 3100 0    50   ~ 0
@@ -320,7 +320,7 @@ TCK
 Text Label 7800 3100 0    50   ~ 0
 TCK2
 Text Label 8450 4950 0    50   ~ 0
-TDO
+TDI
 $Comp
 L combined:+3.3V #PWR09
 U 1 1 51C3AEEC
@@ -761,7 +761,7 @@ F 3 "" H 7300 5600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6200 3300 5600 3300
+	6200 3200 5600 3200
 Wire Wire Line
 	7400 3100 7950 3100
 Wire Wire Line
@@ -1025,7 +1025,7 @@ Wire Wire Line
 Wire Wire Line
 	7800 6000 9100 6000
 Text Label 8250 4100 0    50   ~ 0
-TDI
+TDO
 Wire Wire Line
 	7950 4500 7500 4500
 Connection ~ 7500 2700
@@ -1121,15 +1121,13 @@ $EndComp
 Wire Wire Line
 	7000 4950 6750 4950
 Wire Wire Line
-	6200 3300 6200 4950
+	6200 3200 6200 4950
 Wire Wire Line
 	7500 3700 7500 4500
 Connection ~ 7500 3700
 Connection ~ 7500 4500
 Wire Wire Line
 	6300 4100 6550 4100
-Wire Wire Line
-	6300 3200 6300 4100
 $Comp
 L resistor:resistor_0402 R9
 U 1 1 5D1090E9
@@ -1145,7 +1143,7 @@ $EndComp
 Wire Wire Line
 	6250 4950 6200 4950
 Text Label 6800 4950 0    50   ~ 0
-TDO2
+TDI2
 Wire Wire Line
 	7000 5150 6000 5150
 Wire Wire Line
@@ -1154,4 +1152,6 @@ Wire Wire Line
 	6000 3500 5600 3500
 Text Label 6650 5150 0    50   ~ 0
 DIR
+Wire Wire Line
+	6300 3300 6300 4100
 $EndSCHEMATC
