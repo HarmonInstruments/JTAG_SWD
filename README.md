@@ -1,5 +1,7 @@
 # JTAG_SWD
 
+![photo of PCB](photo.jpg)
+
 ## JTAG
 
 Hirose DF3A-6P-2DS header
