@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:USB_JTAG-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
@@ -310,9 +310,9 @@ $EndComp
 Text Label 5700 3100 0    50   ~ 0
 TCK1
 Text Label 5700 3300 0    50   ~ 0
-TDO1
-Text Label 5700 3200 0    50   ~ 0
 TDI1
+Text Label 5700 3200 0    50   ~ 0
+TDO1
 Text Label 5700 3400 0    50   ~ 0
 TMS1
 Text Label 8550 3100 0    50   ~ 0
@@ -320,7 +320,7 @@ TCK
 Text Label 7800 3100 0    50   ~ 0
 TCK2
 Text Label 8450 4950 0    50   ~ 0
-TDI
+TDO
 $Comp
 L combined:+3.3V #PWR09
 U 1 1 51C3AEEC
@@ -798,17 +798,6 @@ Wire Wire Line
 Wire Wire Line
 	7950 5600 7500 5600
 $Comp
-L connector:USBC_China16 J1
-U 1 1 5CFBB2A7
-P 1000 3250
-F 0 "J1" H 883 3415 50  0000 C CNN
-F 1 "USBC_China16" H 883 3324 50  0000 C CNN
-F 2 "kicad_pcb:USB_C_Receptacle_China_16pin" H 600 3300 50  0001 L CNN
-F 3 "$PARTS/8RYXT/SJ117928.pdf" V 850 3250 50  0001 C CNN
-	1    1000 3250
-	1    0    0    -1  
-$EndComp
-$Comp
 L combined:ground #GND0101
 U 1 1 5CFBDC24
 P 1200 4600
@@ -1025,7 +1014,7 @@ Wire Wire Line
 Wire Wire Line
 	7800 6000 9100 6000
 Text Label 8250 4100 0    50   ~ 0
-TDO
+TDI
 Wire Wire Line
 	7950 4500 7500 4500
 Connection ~ 7500 2700
@@ -1143,7 +1132,7 @@ $EndComp
 Wire Wire Line
 	6250 4950 6200 4950
 Text Label 6800 4950 0    50   ~ 0
-TDI2
+TDO2
 Wire Wire Line
 	7000 5150 6000 5150
 Wire Wire Line
@@ -1154,4 +1143,15 @@ Text Label 6650 5150 0    50   ~ 0
 DIR
 Wire Wire Line
 	6300 3300 6300 4100
+$Comp
+L connector:CGH8B J1
+U 1 1 5CFBB2A7
+P 1000 3250
+F 0 "J1" H 883 3415 50  0000 C CNN
+F 1 "CGH8B" H 883 3324 50  0000 C CNN
+F 2 "kicad_pcb:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 600 3300 50  0001 L CNN
+F 3 "${PARTS}/CGH8B/TYPE-C-31-M-12.pdf" V 850 3250 50  0001 C CNN
+	1    1000 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
