@@ -17,16 +17,16 @@ TC2030-MCP-NL
 
 ## Pinout
 
-|Pin |JTAG | Serial Wire |
-|----|-----|-------------|
-| 1  | VCC | VCC         |
-| 2  | TCK | SWCLK       |
-| 3  | GND | GND         |
-| 4  | TDO | SWDIO       |
-| 5  | NC  | jumper to 6 |
-| 6  | NC  | jumper to 5 |
-| 7  | TDI | SWDIO       |
-| 8  | TMS | NC          |
+|Pin |JTAG | Serial Wire | AVR |
+|----|-----|-------------|-----|
+| 1  | VCC | VCC         | VCC |
+| 2  | TCK | SWCLK       | SCK |
+| 3  | GND | GND         | GND |
+| 4  | TDO | SWDIO       | MISO |
+| 5  | NC  | jumper to 6 | NC |
+| 6  | NC  | jumper to 5 | NC |
+| 7  | TDI | SWDIO       | MOSI |
+| 8  | TMS | NC          | RST |
 
 ## OpenOCD config for ECP5-12
 
@@ -101,3 +101,11 @@ init
 reset halt
 sleep 100
 ```
+
+## AVRDude
+
+```
+avrdude -c c232hm -P USB -p m32u4 -v -b 500000
+```
+
+Higher baud rates failed.
