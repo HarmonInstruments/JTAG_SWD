@@ -1,0 +1,8 @@
+*.lck
+*~
+bom
+*-backups
+*.pdf
+*-cache
+*-cache.lib
+gerber
